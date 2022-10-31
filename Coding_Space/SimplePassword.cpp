@@ -99,7 +99,7 @@ string SimplePassword(string str)
 }
 
 
-int d3main(void)
+int main(void)
 {
 	cout << SimplePassword("apple!M7") << endl;
 	cout << SimplePassword("turkey90AAA=") << endl;

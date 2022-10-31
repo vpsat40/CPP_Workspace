@@ -6,3 +6,7 @@ Contains my solutions to some of the LeetCode & CoderByte Problems.
 
 #STL_Exercises
 Used for STL Based Exercises
+
+
+#Environment
+VS Code (with Mingw or gcc Compiler)

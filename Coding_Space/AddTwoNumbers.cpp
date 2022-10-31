@@ -92,7 +92,7 @@ public:
 };
 
 
-int invmain()
+int main()
 {
 	list<int> result;
 	list<int> l1 = {1, 2, 3, 4};

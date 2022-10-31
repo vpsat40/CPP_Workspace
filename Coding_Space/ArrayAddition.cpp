@@ -68,7 +68,7 @@ int ArrayAddition(int nums[], int arrLen)
 }
 
 
-int AA_main(void)
+int main(void)
 {
     int A[] = {4, 6, 23, 10, 1, 3};
     int B[] = {3,5,-1,8,12};

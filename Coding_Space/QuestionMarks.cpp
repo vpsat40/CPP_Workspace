@@ -58,8 +58,7 @@ string QuestionsMarks(string str)
 
 }
 
-//int main(void)
-int mainQuestion(void)
+int main(void)
 {
   // keep this function call here
   cout << QuestionsMarks("aa6?9??stu?1");

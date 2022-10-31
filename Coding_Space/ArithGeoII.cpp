@@ -59,7 +59,7 @@ string ArithGeo(int arr[], int arrLen)
     return res;
 }
 
-int AG_main(void)
+int main(void)
 {
     int A[] = {5,10,15};
     int B[] = {2,4,6,8};
