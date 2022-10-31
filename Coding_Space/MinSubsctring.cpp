@@ -99,10 +99,8 @@ string MinWindowSubstring(string strArr[], int arrLength)
 	return N.substr(idx, shortest);
 }
 
-int Minmain(void) {
-
-//int main(void) {
-
+int main(void)
+{
   // keep this function call here
   string A[] = {"bacffa", "aff"};
   int arrLength = sizeof(A) / sizeof(*A);

@@ -59,7 +59,7 @@ int PrimeMover(int num)
 
 }
 
-int PM_main(void)
+int main(void)
 {
     // Prime Mover from CoderByte
 

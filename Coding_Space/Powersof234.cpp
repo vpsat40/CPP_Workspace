@@ -79,8 +79,7 @@ bool isPowerOfFour2(int n)
 
 }
 
-int Powersmain(void)
-//int powersofnumbers()
+int main(void)
 {
 	int x=0;
 

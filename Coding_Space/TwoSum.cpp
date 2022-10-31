@@ -82,8 +82,7 @@ public:
 };
 
 
-// Was Main
-int checkTwoSum()
+int main(void)
 {
 	vector<int> result;
 	vector<int> nums = {2, 11, 7, 15};

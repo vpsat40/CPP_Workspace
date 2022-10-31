@@ -59,7 +59,6 @@ bool isPalindrome(int n)
 }
 
 int main(void)
-//int PrimePalindrome()
 {
 	int num = 1000;
 	int x = num;

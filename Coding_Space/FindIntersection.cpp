@@ -92,8 +92,7 @@ string FindIntersection(string strArr[], int arrLength)
 }
 
 
-//int main(void)
-int Intermain(void)
+int main(void)
 {
   // keep this function call here
   //string A[] = {"1, 3, 4, 7, 13", "1, 2, 4, 13, 15"};

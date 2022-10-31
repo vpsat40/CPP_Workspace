@@ -64,10 +64,10 @@ string BracketMatcher(string str)
 	return res;
 }
 
-int d2qmain(void)
+int main(void)
 {
   // keep this function call here
-  cout << BracketMatcher("aa6?9??stu?1");
+  cout << BracketMatcher("aa6?9??stu?1") << endl;
   return 0;
 
   //"9???1???9??1???9"
