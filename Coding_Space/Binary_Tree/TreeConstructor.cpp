@@ -1,6 +1,6 @@
 
 /*
-Tree Constructor
+  Tree Constructor
     Have the function TreeConstructor(strArr) take the array of strings stored in strArr,
     which will contain pairs of integers in the following format:
     (i1,i2), where i1 represents a child node in a tree
@@ -110,8 +110,8 @@ string TreeConstructor(string strArr[], int arrLength) {
   return "true";
 }
 
-int CNU_TCmain(void) {
-
+int main(void) 
+{
   // keep this function call here
   /* Note: In C++ you first have to initialize an array and set
      it equal to the stdin to test your code with arrays. */
