@@ -64,7 +64,7 @@ void postOrderTraverse(Node* root)
 
 }
 
-int BT_main()
+int main()
 {
 
 
