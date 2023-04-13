@@ -64,6 +64,26 @@ struct Node
     }
 };
 
+Node* root = nullptr;
+
+Node* getNewNode(int data)
+{
+    Node* newNode = new Node(data);
+    return newNode;
+}
+
+Node* insertNode(Node* root, int data)
+{
+    if(root == nullptr)
+        root = getNewNode(data);
+    else if(data <= root->key)
+        root->left = insertNode(root->left, data);
+    else
+        root->right = insertNode(root->right, data);
+
+    return root;
+}
+
 void preOrderBottom(Node* node, int dist, int level, auto& bNode)
 {
     // base case - if empty tree
