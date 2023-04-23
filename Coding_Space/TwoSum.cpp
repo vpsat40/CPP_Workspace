@@ -43,7 +43,8 @@ using namespace std;
 
 class Solution {
 public:
-    vector<int> twoSum(vector<int>& nums, int target) {
+    vector<int> twoSum(vector<int>& nums, int target) 
+    {
         vector<int> res;
         vector<int>::iterator it, it1;
         map<int, int> my_map;
@@ -86,11 +87,21 @@ int main(void)
 {
 	vector<int> result;
 	vector<int> nums = {2, 11, 7, 15};
-	int tgt = 9;
+	int tgt = 26;
 
+	vector<int> nums2 = {3, 2, 4};
+    int tgt2 = 7;
 
-	Solution sol;
+	vector<int> nums3 = {3, 3};
+    int tgt3 = 6;
+    
+    Solution sol;
+
 	result = sol.twoSum(nums, tgt);
+    cout << "------------------" << endl;
+    result = sol.twoSum(nums2, tgt2);
+    cout << "------------------" << endl;
+    result = sol.twoSum(nums3, tgt3);
 
 	return 0;
 

@@ -26,18 +26,16 @@ int BinaryConverter(string str)
     int res = 0;
     int base = 0;
 
-    for(int i=(str.size() -1); i >= 0; i--)
+    for(int i=(str.size() -1); i >= 0; i--, base++)
     {
         if(str[i] == '1')
             res += pow(2, base);
-
-        base++;
     }
 
     return res;
 }
 
-int BC_main(void)
+int main(void)
 {
     cout << "Binary Converter Program " << endl;
     cout << BinaryConverter("100101") << endl;

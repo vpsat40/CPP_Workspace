@@ -76,12 +76,12 @@ int romanToInt(string str)
 
         searchStr += str[idx];
         searchStr += str[idx+1];
-        cout << "SearchStr = " << searchStr << endl;
+        // cout << "SearchStr = " << searchStr << endl;
 
         auto itr = romeNumMap.find(searchStr); //MC -- CM -- XC --IV
         if(itr != romeNumMap.end())
         {
-            cout << "SearchStr" << searchStr << "- Value = " << itr->second << endl;
+            // cout << "SearchStr" << searchStr << "- Value = " << itr->second << endl;
             num = num + itr->second;
             idx++;
         }
@@ -89,11 +89,11 @@ int romanToInt(string str)
         {
             searchStr.clear();
             searchStr = str[idx];
-            cout << "Curr char" << searchStr << endl;
+            // cout << "Curr char" << searchStr << endl;
             auto itr2 = romeNumMap.find(searchStr); //M
             if(itr2 != romeNumMap.end())
             {
-                cout << "CurrChar" << str[idx] << "- Value = " << itr2->second << endl;
+                // cout << "CurrChar" << str[idx] << "- Value = " << itr2->second << endl;
                 num += itr2->second;
             }
             else
@@ -142,21 +142,30 @@ int otherRomanToInt(string s)
     return result;
 }
 
-int RI_main(void)
+int main(void)
 {
     int res = 0;
 
 	res = otherRomanToInt("MCMXCIV");
 	cout << "Result = " << res << endl;
-
     cout << "---------------------------------------" << endl;
-
 	res = otherRomanToInt("LVIII");
 	cout << "Result = " << res << endl;
-
 	cout << "---------------------------------------" << endl;
-
 	res = otherRomanToInt("III");
 	cout << "Result = " << res << endl;
+
+    cout << "---------------------------------------" << endl;
+    cout << "---------------------------------------" << endl;
+
+	res = romanToInt("MCMXCIV");
+	cout << "Result = " << res << endl;
+    cout << "---------------------------------------" << endl;
+	res = romanToInt("LVIII");
+	cout << "Result = " << res << endl;
+	cout << "---------------------------------------" << endl;
+	res = romanToInt("III");
+	cout << "Result = " << res << endl;
+
 	return 0;
 }

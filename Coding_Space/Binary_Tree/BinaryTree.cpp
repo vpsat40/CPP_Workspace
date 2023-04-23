@@ -1,6 +1,18 @@
 #include <iostream>
 using namespace std;
 
+/**
+ *                  F
+ *                 / \
+ *               D     J
+ *              / \   /  \
+ *             B   E  G   K
+ *            / \      \  
+ *           A   C      I
+ *                     / 
+ *                    H
+ */
+
 // Data structure to store a binary tree node
 struct Node
 {
@@ -34,6 +46,11 @@ Node* insertNode(Node* root, char data)
     return root;
 }
 
+/*  In Pre-Order traversal, you visit the 
+**  -> Root node
+**  -> traverse left subtree
+**  -> traverse right subtree
+*/
 void preOrderTraverse(Node* root)
 {
     if(root == nullptr)
@@ -44,6 +61,12 @@ void preOrderTraverse(Node* root)
 
 }
 
+/**
+ * For In-Order traversal, you visit the
+ * -> traverse the left subtree
+ * -> visit the root
+ * -> traverse the right subtree
+ */
 void inOrderTraverse(Node* root)
 {
     if(root == nullptr)
@@ -53,6 +76,7 @@ void inOrderTraverse(Node* root)
     inOrderTraverse(root->right);
 
 }
+
 
 void postOrderTraverse(Node* root)
 {

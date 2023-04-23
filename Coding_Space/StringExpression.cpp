@@ -20,16 +20,18 @@
  * Output: negativeonezero
  *
  */
-
+ 
 #include <iostream>
 #include <string>
-#include <unordered_map>
+#include <map>
+// #include <unordered_map>
 
 using namespace std;
 
 void StringExpression(string str)
 {
-	unordered_map<string, char> charmap = { {"zero", '0'}, {"one", '1'}, {"two", '2'}, {"three", '3'}, {"four", '4'}, {"five", '5'}, {"six", '6'}, {"seven", '7'}, {"eight", '8'}, {"nine", '9'}, {"plus", '+'}, {"minus", '-'} };
+	map<string, char> charmap = { {"zero", '0'}, {"one", '1'}, {"two", '2'}, {"three", '3'}, {"four", '4'}, {"five", '5'}, 
+				{"six", '6'}, {"seven", '7'}, {"eight", '8'}, {"nine", '9'}, {"plus", '+'}, {"minus", '-'} };
 	int oper = 0;
 	string word, res;
 	char sign = '@';
@@ -111,6 +113,13 @@ void StringExpression(string str)
 int main(void)
 {
 	StringExpression("fiveonefiveminusfiveonezero");
+	cout << "---------------" << endl;
+	StringExpression("foursixminustwotwoplusonezero");
+	cout << "---------------" << endl;
+	StringExpression("onezeropluseight");
+	cout << "---------------" << endl;
+	StringExpression("oneminusoneone");
+	cout << "---------------" << endl;
 	return 0;
 }
 

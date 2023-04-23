@@ -24,7 +24,7 @@ void convertToHex(const int& num, string& res)
 	return;
 }
 
-int Strmain()
+int main()
 {
 	int  decimal = 55;
 	string output;
