@@ -39,6 +39,7 @@ string LetterCount(string str)
     string word;
     int reps = 1;
     stringstream ss(str);  // Used to break the string sentence into individual words
+    stringstream ss1(str);
     map<string, unordered_map<char,int>> wordList;
 
     // For each word, identify the number of occurances using a hash map.
@@ -47,18 +48,22 @@ string LetterCount(string str)
         unordered_map<char,int> letterCnt;
 
         for(char c : word)
+        {
             letterCnt[c]++;
+            cout << "Char -" << c << " & Count = " << letterCnt[c] << endl;
+        }
+        cout << "Hash size for word - " << word << " - is " << letterCnt.size() << endl << endl;
         wordList.insert(make_pair(word, letterCnt));
     }
 
-    //for(auto it=wordList.begin; it!= wordList.end; it++)
-    for(auto &it : wordList)
+    while(ss1 >> word)
     {
         unordered_map<char,int> letterCnt;
-        word = it.first;
-        letterCnt = it.second;
+        auto it = wordList.find(word);
+        if(it != wordList.end())
+            letterCnt = it->second;
 
-        cout << word << endl;
+        cout << "In " << word << " - you have " << endl;
 
         for(char c : word)
         {
@@ -66,7 +71,7 @@ string LetterCount(string str)
             {
                 reps = letterCnt[c];
                 res = word;
-                cout << c << " - " << letterCnt[c] << "in word - " << word << endl;
+                cout << c << " - " << letterCnt[c] << endl;
                 //letterCnt[c] = 0;
             }
         }
@@ -75,7 +80,7 @@ string LetterCount(string str)
     return res;
 }
 
-int LC_main(void)
+int main(void)
 {
 
     string str1 = "Hello apple pie!";
@@ -84,7 +89,7 @@ int LC_main(void)
 
     cout << "Letter Count str1" << endl << LetterCount(str1) << endl << endl;
     cout << "Letter Count str2" << endl << LetterCount(str2) << endl << endl;
-    //cout << "Letter Count str3" << endl << LetterCount(str3) << endl << endl;
+    cout << "Letter Count str3" << endl << LetterCount(str3) << endl << endl;
 
     return 0;
 }

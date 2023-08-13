@@ -37,7 +37,7 @@ int BinaryConverter(string str)
     return res;
 }
 
-int BC_main(void)
+int main(void)
 {
     cout << "Binary Converter Program " << endl;
     cout << BinaryConverter("100101") << endl;

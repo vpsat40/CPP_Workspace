@@ -34,11 +34,10 @@ string PalindromeTwo(string str)
 
     for(char c : str)
     {
+        // Filter only alphabets. If alphabet is caps bring it to lower case. 
+        // Ignore any special characters
         if(((c >= 'a') && (c <= 'z')) || ((c >= 'A') && (c <= 'Z')))
-            filter += tolower(c);   //Found an alphabet. Could be cap or lower. Get it to lowercase
-        else    //Found a special character or space. Omit it.
-        {}
-        cout << c;
+            filter += tolower(c);   
     }
 
     reversed = string(filter.rbegin(), filter.rend());
