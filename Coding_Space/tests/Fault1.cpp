@@ -2,7 +2,7 @@
 
 using namespace std;
 
-string f()
+const string& f()
 // void f(string &s)
 {
     return "abc";
